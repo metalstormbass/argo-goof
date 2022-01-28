@@ -20,7 +20,6 @@ spec:
         name: goof
         ports:
         - containerPort: 3001
-        - containerPort: 9229
         securityContext:
            allowPrivilegeEscalation: true
 
