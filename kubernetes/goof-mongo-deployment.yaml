@@ -39,6 +39,8 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: /tmp/db
+  claimRef:
+    name: mongo-pvc
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
