@@ -57,7 +57,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /tmp/db
+    path: /tmp/db2
   claimRef:
     name: mysql-pvc   
 ---
