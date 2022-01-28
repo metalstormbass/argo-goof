@@ -50,7 +50,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mysql-pv
+  name: mysql-pv-new
 spec:
   capacity:
     storage: 20Gi
