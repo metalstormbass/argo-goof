@@ -16,6 +16,8 @@ spec:
     spec:
       containers:
       - image: mysql:5
+        args:
+          - "--ignore-db-dir=lost+found"
         imagePullPolicy: Always
         name: goof-msql
         ports:
