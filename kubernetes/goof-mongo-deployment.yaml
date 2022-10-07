@@ -15,7 +15,7 @@ spec:
         app: mongo
     spec:
       containers:
-      - image: mongo
+      - image: mongo:4
         imagePullPolicy: Always
         name: goof-mongo
         ports:
@@ -43,7 +43,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo
+  name: mongo-service
 spec:
   selector:
     app: mongo

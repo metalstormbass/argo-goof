@@ -1,24 +1,25 @@
 version: "2"
 services:
   goof:
-    build: .
+    #build: .
     container_name: goof
+    image: michaelbraunbass/goof-argo
     environment:
       - DOCKER=1
     ports:
       - "3001:3001"
       - "9229:9229"
     links:
-      - goof-mongo
+      - mongo
     depends_on:
-      - goof-mongo
-  goof-mongo:
-    container_name: goof-mongo
-    image: mongo
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo:4
     ports:
       - "27017:27017"
-  goof-mysql:
-    container_name: goof-mysql
+  mysql:
+    container_name: mysql
     image: mysql:5
     environment:
       MYSQL_ROOT_PASSWORD: root
